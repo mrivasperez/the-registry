@@ -1,8 +1,9 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import { SearchLoaderResult } from "./searchLoader";
 
 const SearchPage = () => {
-  const data = useLoaderData();
+  const data = useLoaderData() as SearchLoaderResult;
 
   console.log(data);
   return <div>SearchPage</div>;
