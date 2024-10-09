@@ -4,7 +4,7 @@ import SearchInput from "./SearchInput";
 const Header = () => {
   return (
     <div className="bg-blue-50 border-b border-b-blue-200 mb-4">
-      <div className="container flex justify-between items-center mx-auto">
+      <div className="container flex justify-between items-center mx-auto px-4">
         <Link to={"/"} className="font-bold text-lg text-slate-800 font-mono">
           NPM Registry
         </Link>

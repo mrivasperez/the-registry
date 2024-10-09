@@ -16,7 +16,7 @@ const SearchInput = () => {
   return (
     <Form
       action="/search"
-      className="flex border rounded px-2 py-1 m-2 bg-white border-blue-200 w-4/12"
+      className="flex border rounded px-2 py-1 my-2 bg-white border-blue-200 w-4/12"
     >
       <i className="bi bi-search me-2"></i>
       <input
