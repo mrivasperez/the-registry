@@ -1,4 +1,3 @@
-import React from "react";
 import { PackageSummary } from "../api/types/packageSummary";
 import { Link } from "react-router-dom";
 
