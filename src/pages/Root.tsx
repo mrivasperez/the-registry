@@ -4,7 +4,7 @@ import { Outlet } from "react-router-dom";
 // ROOT LAYOUT
 const Root = () => {
   return (
-    <div>
+    <div className="font-mono">
       <Header />
       <div className="container mx-auto">
         <Outlet />
