@@ -3,9 +3,11 @@ import SearchInput from "./SearchInput";
 
 const Header = () => {
   return (
-    <div>
-      <Link to={"/"}>NPM Registry</Link>
-      <SearchInput />
+    <div className="bg-blue-50">
+      <div className="container flex justify-between items-center mx-auto">
+        <Link to={"/"}>NPM Registry</Link>
+        <SearchInput />
+      </div>
     </div>
   );
 };
