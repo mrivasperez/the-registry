@@ -1,5 +1,7 @@
 import { PackageSummary } from "../api/types/packageSummary";
 import { Link } from "react-router-dom";
+import { v4 as uuid } from "uuid";
+
 
 interface PackageListItemProps {
   data: PackageSummary;
@@ -8,7 +10,7 @@ interface PackageListItemProps {
 const PackageListItem = ({ data }: PackageListItemProps) => {
   const renderedKeywords = (data.keywords || []).map((keyword) => (
     <div
-      key={keyword}
+      key={`${keyword}-${uuid()}`}
       className="block py-0.5 px-1 text-xs bg-blue-100 rounded h-full w-full whitespace-nowrap"
     >
       {keyword}
