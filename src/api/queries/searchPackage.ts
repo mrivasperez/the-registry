@@ -14,18 +14,23 @@ interface SearchResponse {
 export const searchPackages = async (
   query: string
 ): Promise<PackageSummary[]> => {
-  const res = await fetch(
-    `https://registry.npmjs.org/-/v1/search?text=${query}`
-  );
-  const data: SearchResponse = await res.json();
-  return data.objects.map(
-    ({ package: { name, description, version, keywords } }) => {
-      return {
-        name,
-        description,
-        version,
-        keywords
-      };
-    }
-  );
+  try {
+    const res = await fetch(
+      `https://registry.npmjs.org/-/v1/search?text=${query}`
+    );
+    const data: SearchResponse = await res.json();
+    return data.objects.map(
+      ({ package: { name, description, version, keywords } }) => {
+        return {
+          name,
+          description,
+          version,
+          keywords
+        };
+      }
+    );
+  } catch (error) {
+    console.error("Error during search:", (error as Error).message);
+    return [];
+  }
 };
